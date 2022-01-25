@@ -1,4 +1,3 @@
-
 <head>
   <title>Pramod Potdar</title>
   <link rel="stylesheet" type="text/css" href="css/style2.css" />
@@ -8,10 +7,19 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149843128-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'UA-149843128-1');
+
+    function doRepeat() {
+      var dobetterDiv = document.getElementById('dobetter');
+      var elements = dobetterDiv.children;
+      Array.prototype.forEach.call(elements, function (child) {
+        ele = child.cloneNode(true)
+        dobetterDiv.appendChild(ele);
+      });
+    }
   </script>
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -20,33 +28,40 @@
   <link rel="manifest" href="/site.webmanifest">
 
 </head>
+
 <body>
   <table cellspacing="10">
-  <tr>
-    <td>
-      <!-- <img style="width: 121px" src="https://avatars3.githubusercontent.com/u/3957773?s=460&v=4" class="circular"/> -->
-    </td>
-    <td>
-      <b class="big-font">Pramod Potdar</b><br/>
-      <div class="medium-font">
-        Sheffield, England, United Kingdom<br/>
-        pramodpots@gmail.com<br/>
-        <a target="_blank" href="https://dobetter.page">Blog</a> /
-        <a target="_blank" href="https://github.com/xodpo/">GitHub</a> /
-        <a target="_blank" href="https://www.linkedin.com/in/pramodpots/">LinkedIn</a> /
-        <a target="_blank" href="https://twitter.com/pramodpots">Twitter</a>
-      </div>
-    </td>
-  </tr>
+    <tr>
+      <td>
+        <!-- <img style="width: 121px" src="https://avatars3.githubusercontent.com/u/3957773?s=460&v=4" class="circular"/> -->
+      </td>
+      <td>
+        <b class="big-font">Pramod Potdar</b><br />
+        <div class="medium-font">
+          Sheffield, England, United Kingdom<br />
+          pramodpots@gmail.com<br />
+          <!-- <a target="_blank" href="https://dobetter.page">Blog</a> / -->
+          <a target="_blank" href="https://github.com/xodpo/">GitHub</a> /
+          <a target="_blank" href="https://www.linkedin.com/in/pramodpots/">LinkedIn</a> /
+          <a target="_blank" href="https://twitter.com/pramodpots">Twitter</a>
+        </div>
+      </td>
+    </tr>
   </table>
-  <hr/>
+  <hr />
 
   <p>
-  Hi! I am Experienced Software Engineer with a demonstrated history of 4 years working in the computer software industry, work- force management domain and telecom- munications domain. 
-  If you catch me out- side of work, I’m an avid reader and lover of chess!
+    Hi! I am Experienced Software Engineer with a demonstrated history of 4 years working in the computer software
+    industry, work- force management domain and telecom- munications domain.
+    If you catch me out- side of work, I’m an avid reader and lover of chess!
   </p>
+  <hr />
+  <div id='dobetter'>
+    <p><i><b>do better</b></i></p>
+  </div>
+  <button class="button-55" role="button" onclick="doRepeat()">find the beauty in repetition...</button>
 
-    <!-- <b class="medium-font">Previous work &amp; education</b>
+  <!-- <b class="medium-font">Previous work &amp; education</b>
     <ul>
       <li>2x Internship at Google, Google Search, California <span class="date">Jan - Apr 2016 and Sep - Dec 2016</span</li>
       <li>Part-time SWE at Coinbase, Payments, Remote <span class="date">Sep - Dec 2015</span></li>
